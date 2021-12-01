@@ -1,0 +1,6 @@
+framework module Pods_AQIAssignment {
+  umbrella header "Pods-AQIAssignment-umbrella.h"
+
+  export *
+  module * { export * }
+}

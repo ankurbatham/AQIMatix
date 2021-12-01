@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iyf-z4-ilu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QTz-ZZ-3ZN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iyf-z4-ilu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YhN-rE-7kl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="K9K-K3-Nvs" kind="relationship" relationship="rootViewController" id="EXP-tk-bI2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLm-0e-HlB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="80"/>
+        </scene>
+        <!--CitiesAQI View Controller-->
+        <scene sceneID="jjQ-fk-hrB">
+            <objects>
+                <viewController storyboardIdentifier="CitiesAQIViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K9K-K3-Nvs" customClass="CitiesAQIViewController" customModule="AQIAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yWI-gP-AUt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cwP-vy-kMN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AQIInfoTableViewCell" rowHeight="76" id="vDA-BQ-Dup" customClass="AQIInfoTableViewCell" customModule="AQIAssignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vDA-BQ-Dup" id="gX3-Uz-CtO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSX-1m-CQu">
+                                                    <rect key="frame" x="5" y="5" width="404" height="66"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0R-Me-Lbd" userLabel="cityLabel">
+                                                            <rect key="frame" x="8" y="8" width="332" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3Y-3q-J9L" userLabel="timeLabel">
+                                                            <rect key="frame" x="358" y="40" width="38" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZc-j7-vYJ" userLabel="aqiLabel">
+                                                            <rect key="frame" x="348" y="8" width="48" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg3-rd-qA3" userLabel="timeLabel">
+                                                            <rect key="frame" x="8" y="40" width="38" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="q3Y-3q-J9L" firstAttribute="top" secondItem="UZc-j7-vYJ" secondAttribute="bottom" constant="8" id="0co-jG-XO3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="UZc-j7-vYJ" secondAttribute="trailing" constant="8" id="13r-UW-ECE"/>
+                                                        <constraint firstAttribute="trailing" secondItem="q3Y-3q-J9L" secondAttribute="trailing" constant="8" id="5Dc-sF-nLE"/>
+                                                        <constraint firstItem="Z0R-Me-Lbd" firstAttribute="leading" secondItem="bSX-1m-CQu" secondAttribute="leading" constant="8" id="7Nj-5F-8i0"/>
+                                                        <constraint firstItem="UZc-j7-vYJ" firstAttribute="top" secondItem="bSX-1m-CQu" secondAttribute="top" constant="8" id="CU4-1A-4Y7"/>
+                                                        <constraint firstItem="UZc-j7-vYJ" firstAttribute="leading" secondItem="Z0R-Me-Lbd" secondAttribute="trailing" constant="8" id="Hka-Do-XN3"/>
+                                                        <constraint firstItem="q3Y-3q-J9L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yg3-rd-qA3" secondAttribute="trailing" constant="8" symbolic="YES" id="MgA-UD-gd4"/>
+                                                        <constraint firstItem="Z0R-Me-Lbd" firstAttribute="top" secondItem="bSX-1m-CQu" secondAttribute="top" constant="8" id="Nqb-2P-pyL"/>
+                                                        <constraint firstItem="Yg3-rd-qA3" firstAttribute="leading" secondItem="bSX-1m-CQu" secondAttribute="leading" constant="8" id="VAH-zD-6X8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="q3Y-3q-J9L" secondAttribute="bottom" constant="8" id="gya-CI-R1a"/>
+                                                        <constraint firstItem="Yg3-rd-qA3" firstAttribute="centerY" secondItem="q3Y-3q-J9L" secondAttribute="centerY" id="wZd-uC-ba1"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="bSX-1m-CQu" secondAttribute="bottom" constant="5" id="6os-Gp-cd4"/>
+                                                <constraint firstAttribute="trailing" secondItem="bSX-1m-CQu" secondAttribute="trailing" constant="5" id="QI5-3T-Sid"/>
+                                                <constraint firstItem="bSX-1m-CQu" firstAttribute="leading" secondItem="gX3-Uz-CtO" secondAttribute="leading" constant="5" id="SMJ-Lj-HNQ"/>
+                                                <constraint firstItem="bSX-1m-CQu" firstAttribute="top" secondItem="gX3-Uz-CtO" secondAttribute="top" constant="5" id="tUf-gN-hyI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="AQIValueLabel" destination="UZc-j7-vYJ" id="vBO-fb-aNP"/>
+                                            <outlet property="categoryLabel" destination="q3Y-3q-J9L" id="vGB-je-iUs"/>
+                                            <outlet property="cityNameLabel" destination="Z0R-Me-Lbd" id="IDl-lq-SWp"/>
+                                            <outlet property="containerView" destination="bSX-1m-CQu" id="lrC-sg-DSB"/>
+                                            <outlet property="timeLabel" destination="Yg3-rd-qA3" id="Eb2-Xn-pGM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="K9K-K3-Nvs" id="Htk-jC-EmN"/>
+                                    <outlet property="delegate" destination="K9K-K3-Nvs" id="XQq-3K-xSu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G8B-uD-w6L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cwP-vy-kMN" secondAttribute="bottom" id="4ko-IE-2hA"/>
+                            <constraint firstItem="cwP-vy-kMN" firstAttribute="top" secondItem="G8B-uD-w6L" secondAttribute="top" id="9Do-iu-Pbx"/>
+                            <constraint firstItem="cwP-vy-kMN" firstAttribute="trailing" secondItem="G8B-uD-w6L" secondAttribute="trailing" id="FEQ-qq-quH"/>
+                            <constraint firstItem="cwP-vy-kMN" firstAttribute="leading" secondItem="G8B-uD-w6L" secondAttribute="leading" id="qus-W4-7Yu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LQ1-kx-CUw"/>
+                    <connections>
+                        <outlet property="citiesDataTableView" destination="cwP-vy-kMN" id="d9u-UV-xYn"/>
+                        <segue destination="9vC-1Y-c0i" kind="show" identifier="aqiGraphplot" id="HNx-Zj-N7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yku-Sb-Hze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476.81159420289856" y="79.6875"/>
+        </scene>
+        <!--City Graph View Controller-->
+        <scene sceneID="1ZF-QG-gRa">
+            <objects>
+                <viewController id="9vC-1Y-c0i" customClass="CityGraphViewController" customModule="AQIAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iIr-Zc-Cfd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brS-hf-XLe" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="8" y="228" width="398" height="398"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="brS-hf-XLe" secondAttribute="height" multiplier="1:1" id="zkX-MT-Ls5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1m4-sC-0HY" customClass="CityGraphDetailView" customModule="AQIAssignment" customModuleProvider="target">
+                                <rect key="frame" x="8" y="138" width="398" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-Ct-i7F" userLabel="cityLabel">
+                                        <rect key="frame" x="8" y="8" width="364" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rZ-yn-Btg" userLabel="timeLabel">
+                                        <rect key="frame" x="382" y="40" width="8" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amq-C9-Imy" userLabel="aqiLabel">
+                                        <rect key="frame" x="380" y="8" width="10" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuo-fM-B8h" userLabel="timeLabel">
+                                        <rect key="frame" x="8" y="40" width="8" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9rZ-yn-Btg" firstAttribute="top" secondItem="amq-C9-Imy" secondAttribute="bottom" constant="8" id="8Li-qm-WaR"/>
+                                    <constraint firstAttribute="trailing" secondItem="9rZ-yn-Btg" secondAttribute="trailing" constant="8" id="DNa-us-kQw"/>
+                                    <constraint firstItem="Iuo-fM-B8h" firstAttribute="leading" secondItem="1m4-sC-0HY" secondAttribute="leading" constant="8" id="LAV-07-iPU"/>
+                                    <constraint firstItem="9rZ-yn-Btg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iuo-fM-B8h" secondAttribute="trailing" constant="8" symbolic="YES" id="QqW-Q5-336"/>
+                                    <constraint firstItem="amq-C9-Imy" firstAttribute="top" secondItem="1m4-sC-0HY" secondAttribute="top" constant="8" id="QxK-T9-t3d"/>
+                                    <constraint firstItem="B4q-Ct-i7F" firstAttribute="top" secondItem="1m4-sC-0HY" secondAttribute="top" constant="8" id="Txi-S4-tP7"/>
+                                    <constraint firstAttribute="bottom" secondItem="9rZ-yn-Btg" secondAttribute="bottom" constant="8" id="Vaj-Lf-lgm"/>
+                                    <constraint firstAttribute="height" constant="66" id="a3y-Zo-vUx"/>
+                                    <constraint firstAttribute="trailing" secondItem="amq-C9-Imy" secondAttribute="trailing" constant="8" id="gAl-cI-zxg"/>
+                                    <constraint firstItem="amq-C9-Imy" firstAttribute="leading" secondItem="B4q-Ct-i7F" secondAttribute="trailing" constant="8" id="kMa-Li-tJm"/>
+                                    <constraint firstItem="Iuo-fM-B8h" firstAttribute="centerY" secondItem="9rZ-yn-Btg" secondAttribute="centerY" id="r0e-5Q-dBO"/>
+                                    <constraint firstItem="B4q-Ct-i7F" firstAttribute="leading" secondItem="1m4-sC-0HY" secondAttribute="leading" constant="8" id="zZA-ia-5qj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="AQIValueLabel" destination="amq-C9-Imy" id="YfY-nA-9lw"/>
+                                    <outlet property="categoryLabel" destination="Iuo-fM-B8h" id="fK7-2y-L0o"/>
+                                    <outlet property="cityNameLabel" destination="B4q-Ct-i7F" id="BKA-mf-KFo"/>
+                                    <outlet property="timeLabel" destination="9rZ-yn-Btg" id="sIj-T1-aiY"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nLs-Gy-EBD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1m4-sC-0HY" firstAttribute="leading" secondItem="nLs-Gy-EBD" secondAttribute="leading" constant="8" id="EZm-KL-IXy"/>
+                            <constraint firstItem="1m4-sC-0HY" firstAttribute="top" secondItem="nLs-Gy-EBD" secondAttribute="top" constant="50" id="awa-oM-lov"/>
+                            <constraint firstItem="nLs-Gy-EBD" firstAttribute="trailing" secondItem="1m4-sC-0HY" secondAttribute="trailing" constant="8" id="e8z-aw-bSo"/>
+                            <constraint firstItem="brS-hf-XLe" firstAttribute="top" secondItem="1m4-sC-0HY" secondAttribute="bottom" constant="24" id="f20-8s-RO5"/>
+                            <constraint firstItem="brS-hf-XLe" firstAttribute="centerX" secondItem="iIr-Zc-Cfd" secondAttribute="centerX" id="odp-Hq-1DS"/>
+                            <constraint firstItem="brS-hf-XLe" firstAttribute="leading" secondItem="nLs-Gy-EBD" secondAttribute="leading" constant="8" id="qid-dd-BNv"/>
+                            <constraint firstItem="nLs-Gy-EBD" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="brS-hf-XLe" secondAttribute="trailing" constant="8" id="zBL-Ud-IWn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wWJ-HY-tAc"/>
+                    <connections>
+                        <outlet property="aqiDetailView" destination="1m4-sC-0HY" id="MiU-2O-kBd"/>
+                        <outlet property="graphView" destination="brS-hf-XLe" id="FKZ-hB-I7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAf-gt-0Sn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="68"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
